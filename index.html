@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Basics</title>
+    <link
+    rel="stylesheet"
+    href="./styles.css"
+    />
+  </head>
+  <body>
+      <h1>Introduction to CSS</h1>
+      <p id="intro-paragraph">CSS (<span class="bold-underline">C</span>ascading<span class="bold-underline"> S</span>tyle <span class="bold-underline">S</span>heets) is the code that styles web content. CSS basics walks through what you need to get started.<br>
+        <br />
+     We'll answer questions like:<br><em>How do I make text red?</em> 
+     <br>
+     <br>
+     <em> How do I make content display at a certain location in the (webpage) layout?</em><br> <em><br>
+        How do I decorate my webpage with background images and colors?</em></p>
+    <h2>What is CSS?</h2>
+    <p id="second-paragraph">CSS is <strong>not</strong> a <em>programming language</em>. It's <strong>not</strong> a <em>markup language</em> either.<br>
+        <br />
+    <span class="what-css-is">CSS is a style sheet language</span> .<br> 
+    <span class="what-css-is"><br />
+        CSS is what you use to selectively style HTML elements</span>.<br>
+         For example, this CSS selects <span class="to-highlight">h1</span> text, setting the color to <span id="blue">blue</span> and the background-color to <span id="yellow">yellow</span>.<br>
+    The second CSS selects <span class="to-highlight">paragraph</span> text, setting the color to <span id="red">red</span> :</p>
+    <br />
+ <img class="img" src="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/selector.png" width="350" >
+ 
+    <p>Let's try it out! Using a text editor, paste the lines of CSS (above) into a new file. Save the file as <span class="to-highlight">style.css </span> in a directory named styles.</p>
+    <p>To make the code work, we still need to apply this CSS (above) to your HTML document.<br> Otherwise, the styling won't change the appearance of the HTML. (If you haven't been following our project, pause here to read <a
+        target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a> and <a
+        target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">
+        HTML basics</a>.)
+    </p>
+    <ol>
+        <li>Open your<span class="to-highlight">index.html </span> file. Paste the following line in the head (between the 
+            <a
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"> head
+            </a> tags):
+  </li>
+  <br />
+  <img class="img" src="https://www.codegrepper.com/codeimages/css-link-rel-stylesheet.png" width="600">
+<br />
+<br />
+
+    <li>Save <span class="to-highlight">index.html</span> and load it in your browser. You should see something like this:</li>
+
+    <img class="img"src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png" width="500" >
+
+    <p>If your paragraph text is red, congratulations! Your CSS is working. </p>
+</ol>
+
+<h2>Anatomy of a CSS Ruleset</h2>
+<p>Let's dissect the CSS code for red paragraph text to understand how it works :</p>
+<br />
+<img class="img"src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" width="300" >
+<p>
+    The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) Note the names of the individual parts: 
+</p>
+<ul>
+    <li><strong>Selector</strong></li>
+    <p>This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example,p  elements).<br>
+
+    To style a different element, change the selector.</p>
+    <br>
+    <li><strong>Declaration</strong></li>
+    <p>
+    This is a single rule like color: red;. It specifies which of the element's properties you want to style.     
+    </p>
+    <br>
+    <li><strong>Properties</strong></li>
+    <p>
+    These are ways in which you can style an HTML element. (In this example, color is a property of the p elements.)<br />
+     In CSS, you choose which properties you want to affect in the rule.     
+    </p>
+    <br>
+    <li><strong>Property value</strong></li>
+    <p>To the right of the property—after the colon—there is the property value.<br />
+         This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)</p>
+    <br>
+</ul>
+<p>Note the other important parts of the syntax:</p>
+<ul>
+    <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+    <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+    <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.</li>
+</ul>
+<p>To modify multiple property values in one ruleset, write them separated by semicolons.</p>
+
+<h2>Selectors</h2>
+<p>To learn more about selectors,see the MDN
+    <a
+    target="_blank"
+    href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectors Guide</a>
+</p>
+
+<h3>CSS:All about boxes</h3>
+<p>Something you'll notice about writing CSS: a lot of it is about boxes.<br>
+     This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.</p>
+<img class="img" src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/boxes.jpg" width="400">
+<p>CSS layout is mostly based on the box model. Each box taking up space on your page has properties like:</p>
+<ul>
+    <li>padding, the space around the content. In the example below, it is the space around the paragraph text.</li>
+    <li>border, the solid line that is just outside the padding.</li>
+    <li>margin, the space around the outside of the border.</li>
+    <p>In this section we also use:</p>
+    <ul>
+        <li>width (of an element).</li>
+        <li>background-color, the color behind an element's content and padding.</li>
+        <li>color, the color of an element's content (usually text).</li>
+        <li>text-shadow sets a drop shadow on the text inside an element.</li>
+        <li>display sets the display mode of an element. (keep reading to learn more)</li>
+    </ul>
+    <p>To continue, let's add more CSS. Keep adding these new rules at the bottom of style.css. Experiment with changing values to see what happens.</p>
+    
+</ul>
+  </body>
+</html>
+
